@@ -9,6 +9,7 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,17 +19,24 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public Venta()
         {
             this.DetalleVentas = new HashSet<DetalleVenta>();
+            this.Garantias = new HashSet<Garantia>();
         }
     
-        public int Id { get; set; }
-        public Nullable<int> ClienteId { get; set; }
-        public Nullable<int> SedeId { get; set; }
-        public Nullable<System.DateTime> FechaVenta { get; set; }
-        public Nullable<decimal> Total { get; set; }
-    
+        public int IdVenta { get; set; }
+        public System.DateTime FechaVenta { get; set; }
+        public Nullable<int> IdCliente { get; set; }
+        public Nullable<int> IdEmpleado { get; set; }
+        public Nullable<decimal> TotalVenta { get; set; }
+
+        [JsonIgnore]
         public virtual Cliente Cliente { get; set; }
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleVenta> DetalleVentas { get; set; }
-        public virtual Sede Sede { get; set; }
+        [JsonIgnore]
+        public virtual Empleado Empleado { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Garantia> Garantias { get; set; }
     }
 }

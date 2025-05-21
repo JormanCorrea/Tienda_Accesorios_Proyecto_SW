@@ -163,15 +163,24 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Clases\clsEmpleado.cs" />
+    <Compile Include="Clases\clsProducto.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Accesorio.cs">
+    <Compile Include="Models\Categoria.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ciudad.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Compra.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DBTiendaAccesorios.Context.cs">
@@ -189,25 +198,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBTiendaAccesorios.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\DetallePedidoProveedor.cs">
+    <Compile Include="Models\DetalleCompra.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DetalleVenta.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Empleado.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Garantia.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PedidoProveedor.cs">
+    <Compile Include="Models\InventarioSede.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pai.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Producto.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Proveedor.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Sede.cs">
+    <Compile Include="Models\ProveedorProducto.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
+    <Compile Include="Models\Sede.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Venta.cs">

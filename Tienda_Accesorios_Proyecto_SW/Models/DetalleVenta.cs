@@ -9,26 +9,21 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
     public partial class DetalleVenta
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DetalleVenta()
-        {
-            this.Garantias = new HashSet<Garantia>();
-        }
-    
-        public int Id { get; set; }
-        public Nullable<int> VentaId { get; set; }
-        public Nullable<int> AccesorioId { get; set; }
-        public Nullable<int> Cantidad { get; set; }
-        public Nullable<decimal> PrecioUnitario { get; set; }
-    
-        public virtual Accesorio Accesorio { get; set; }
+        public int IdDetalleVenta { get; set; }
+        public Nullable<int> IdVenta { get; set; }
+        public Nullable<int> CodigoSKU { get; set; }
+        public int CantidadVendida { get; set; }
+        public decimal PrecioUnitarioVenta { get; set; }
+
+        [JsonIgnore]
+        public virtual Producto Producto { get; set; }
+        [JsonIgnore]
         public virtual Venta Venta { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Garantia> Garantias { get; set; }
     }
 }

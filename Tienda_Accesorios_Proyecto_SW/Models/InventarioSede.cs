@@ -12,12 +12,14 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class InventarioSede
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int IdInventario { get; set; }
+        public Nullable<int> IdSede { get; set; }
+        public Nullable<int> CodigoSKU { get; set; }
+        public int CantidadDisponible { get; set; }
+    
+        public virtual Producto Producto { get; set; }
+        public virtual Sede Sede { get; set; }
     }
 }

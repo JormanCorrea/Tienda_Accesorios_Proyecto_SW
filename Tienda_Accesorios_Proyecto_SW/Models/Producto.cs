@@ -13,28 +13,37 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Sede
+    public partial class Producto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sede()
+        public Producto()
         {
-            this.Empleadoes = new HashSet<Empleado>();
+            this.DetalleCompras = new HashSet<DetalleCompra>();
+            this.DetalleVentas = new HashSet<DetalleVenta>();
             this.InventarioSedes = new HashSet<InventarioSede>();
+            this.ProveedorProductoes = new HashSet<ProveedorProducto>();
         }
     
-        public int IdSede { get; set; }
-        public string NombreSede { get; set; }
-        public string DireccionSede { get; set; }
-        public string TelefonoSede { get; set; }
-        public Nullable<int> IdCiudadSede { get; set; }
-
-        [JsonIgnore]
-        public virtual Ciudad Ciudad { get; set; }
+        public int CodigoSKU { get; set; }
+        public string NombreProducto { get; set; }
+        public string DescripcionProducto { get; set; }
+        public decimal PrecioVenta { get; set; }
+        public int Stock { get; set; }
+        public Nullable<int> IdCategoria { get; set; }
+        
+        [JsonIgnore]       
+        public virtual Categoria Categoria { get; set; }
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Empleado> Empleadoes { get; set; }
+        public virtual ICollection<DetalleCompra> DetalleCompras { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DetalleVenta> DetalleVentas { get; set; }
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<InventarioSede> InventarioSedes { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProveedorProducto> ProveedorProductoes { get; set; }
     }
 }

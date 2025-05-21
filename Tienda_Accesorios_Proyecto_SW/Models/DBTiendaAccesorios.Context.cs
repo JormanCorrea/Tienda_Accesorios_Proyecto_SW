@@ -25,15 +25,20 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Accesorio> Accesorios { get; set; }
+        public virtual DbSet<Categoria> Categorias { get; set; }
+        public virtual DbSet<Ciudad> Ciudads { get; set; }
         public virtual DbSet<Cliente> Clientes { get; set; }
-        public virtual DbSet<DetallePedidoProveedor> DetallePedidoProveedors { get; set; }
+        public virtual DbSet<Compra> Compras { get; set; }
+        public virtual DbSet<DetalleCompra> DetalleCompras { get; set; }
         public virtual DbSet<DetalleVenta> DetalleVentas { get; set; }
+        public virtual DbSet<Empleado> Empleadoes { get; set; }
         public virtual DbSet<Garantia> Garantias { get; set; }
-        public virtual DbSet<PedidoProveedor> PedidoProveedors { get; set; }
+        public virtual DbSet<InventarioSede> InventarioSedes { get; set; }
+        public virtual DbSet<Pai> Pais { get; set; }
+        public virtual DbSet<Producto> Productoes { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
+        public virtual DbSet<ProveedorProducto> ProveedorProductoes { get; set; }
         public virtual DbSet<Sede> Sedes { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Venta> Ventas { get; set; }
     }
 }

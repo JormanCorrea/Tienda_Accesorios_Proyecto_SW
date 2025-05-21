@@ -13,21 +13,26 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente
+    public partial class Compra
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Compra()
         {
-            this.Ventas = new HashSet<Venta>();
+            this.DetalleCompras = new HashSet<DetalleCompra>();
         }
     
-        public int IdCliente { get; set; }
-        public string NombreCliente { get; set; }
-        public string DireccionCliente { get; set; }
-        public string TelefonoCliente { get; set; }
-        [JsonIgnore]
+        public int IdCompra { get; set; }
+        public System.DateTime FechaCompra { get; set; }
+        public Nullable<int> IdProveedor { get; set; }
+        public Nullable<int> IdEmpleado { get; set; }
+        public Nullable<decimal> TotalCompra { get; set; }
 
+        [JsonIgnore]
+        public virtual Empleado Empleado { get; set; }
+        [JsonIgnore]
+        public virtual Proveedor Proveedor { get; set; }
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Ventas { get; set; }
+        public virtual ICollection<DetalleCompra> DetalleCompras { get; set; }
     }
 }

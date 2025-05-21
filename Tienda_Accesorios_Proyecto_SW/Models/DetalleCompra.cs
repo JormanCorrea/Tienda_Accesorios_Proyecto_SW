@@ -12,14 +12,15 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Garantia
+    public partial class DetalleCompra
     {
-        public int IdGarantia { get; set; }
-        public Nullable<int> IdVenta { get; set; }
-        public System.DateTime FechaInicioGarantia { get; set; }
-        public System.DateTime FechaFinGarantia { get; set; }
-        public string DescripcionGarantia { get; set; }
+        public int IdDetalleCompra { get; set; }
+        public Nullable<int> IdCompra { get; set; }
+        public Nullable<int> CodigoSKU { get; set; }
+        public int CantidadComprada { get; set; }
+        public decimal PrecioUnitarioCompra { get; set; }
     
-        public virtual Venta Venta { get; set; }
+        public virtual Compra Compra { get; set; }
+        public virtual Producto Producto { get; set; }
     }
 }

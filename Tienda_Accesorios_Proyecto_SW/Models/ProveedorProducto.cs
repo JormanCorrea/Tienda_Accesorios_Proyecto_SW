@@ -12,15 +12,15 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class DetallePedidoProveedor
+    public partial class ProveedorProducto
     {
-        public int Id { get; set; }
-        public Nullable<int> PedidoId { get; set; }
-        public Nullable<int> AccesorioId { get; set; }
-        public Nullable<int> Cantidad { get; set; }
-        public Nullable<decimal> PrecioCompra { get; set; }
+        public int IdProveedorProducto { get; set; }
+        public Nullable<int> IdProveedor { get; set; }
+        public Nullable<int> CodigoSKU { get; set; }
+        public decimal PrecioProveedor { get; set; }
+        public Nullable<System.DateTime> FechaUltimaActualizacionPrecio { get; set; }
     
-        public virtual Accesorio Accesorio { get; set; }
-        public virtual PedidoProveedor PedidoProveedor { get; set; }
+        public virtual Producto Producto { get; set; }
+        public virtual Proveedor Proveedor { get; set; }
     }
 }

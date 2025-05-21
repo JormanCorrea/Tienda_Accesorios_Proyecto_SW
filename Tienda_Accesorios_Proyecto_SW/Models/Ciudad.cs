@@ -13,21 +13,26 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Cliente
+    public partial class Ciudad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente()
+        public Ciudad()
         {
-            this.Ventas = new HashSet<Venta>();
+            this.Proveedors = new HashSet<Proveedor>();
+            this.Sedes = new HashSet<Sede>();
         }
     
-        public int IdCliente { get; set; }
-        public string NombreCliente { get; set; }
-        public string DireccionCliente { get; set; }
-        public string TelefonoCliente { get; set; }
-        [JsonIgnore]
+        public int IdCiudad { get; set; }
+        public string NombreCiudad { get; set; }
+        public Nullable<int> IdPais { get; set; }
 
+        [JsonIgnore]
+        public virtual Pai Pai { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]        
+        public virtual ICollection<Proveedor> Proveedors { get; set; }
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Venta> Ventas { get; set; }
+        public virtual ICollection<Sede> Sedes { get; set; }
     }
 }

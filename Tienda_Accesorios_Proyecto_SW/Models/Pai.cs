@@ -9,24 +9,22 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
-    public partial class PedidoProveedor
+    public partial class Pai
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PedidoProveedor()
+        public Pai()
         {
-            this.DetallePedidoProveedors = new HashSet<DetallePedidoProveedor>();
+            this.Ciudads = new HashSet<Ciudad>();
         }
     
-        public int Id { get; set; }
-        public Nullable<int> ProveedorId { get; set; }
-        public Nullable<System.DateTime> FechaPedido { get; set; }
-        public string Estado { get; set; }
-    
+        public int IdPais { get; set; }
+        public string NombrePais { get; set; }
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetallePedidoProveedor> DetallePedidoProveedors { get; set; }
-        public virtual Proveedor Proveedor { get; set; }
+        public virtual ICollection<Ciudad> Ciudads { get; set; }
     }
 }

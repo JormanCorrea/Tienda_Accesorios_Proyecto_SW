@@ -9,26 +9,23 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
-    public partial class Accesorio
+    public partial class Categoria
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Accesorio()
+        public Categoria()
         {
-            this.DetallePedidoProveedors = new HashSet<DetallePedidoProveedor>();
-            this.DetalleVentas = new HashSet<DetalleVenta>();
+            this.Productoes = new HashSet<Producto>();
         }
     
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public Nullable<decimal> PrecioVenta { get; set; }
-        public string Descripcion { get; set; }
+        public int IdCategoria { get; set; }
+        public string NombreCategoria { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetallePedidoProveedor> DetallePedidoProveedors { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetalleVenta> DetalleVentas { get; set; }
+        [JsonIgnore]
+        public virtual ICollection<Producto> Productoes { get; set; }
     }
 }

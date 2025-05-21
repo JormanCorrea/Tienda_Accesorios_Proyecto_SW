@@ -17,17 +17,19 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Proveedor()
         {
-            this.PedidoProveedors = new HashSet<PedidoProveedor>();
+            this.Compras = new HashSet<Compra>();
+            this.ProveedorProductoes = new HashSet<ProveedorProducto>();
         }
     
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Telefono { get; set; }
-        public string Ciudad { get; set; }
-        public string Pais { get; set; }
-        public string TipoProveedor { get; set; }
+        public int IdProveedor { get; set; }
+        public string NombreProveedor { get; set; }
+        public string DireccionProveedor { get; set; }
+        public Nullable<int> IdCiudadProveedor { get; set; }
     
+        public virtual Ciudad Ciudad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PedidoProveedor> PedidoProveedors { get; set; }
+        public virtual ICollection<Compra> Compras { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProveedorProducto> ProveedorProductoes { get; set; }
     }
 }
