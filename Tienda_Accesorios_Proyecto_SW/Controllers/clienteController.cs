@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using Tienda_Accesorios_Proyecto_SW.Clases;
+using Tienda_Accesorios_Proyecto_SW.Models;
+
+namespace Tienda_Accesorios_Proyecto_SW.Controllers
+{
+    [RoutePrefix("api/cliente")]
+    //[Authorize]
+    public class clienteController : ApiController
+    {
+        [HttpGet]
+        [Route("ConsultarTodos")]
+        public List<Cliente> ConsultarTodos()
+        {
+            clsCliente Cliente = new clsCliente();
+            return Cliente.ConsultarTodos();
+        }
+
+        [HttpGet]
+        [Route("ConsultarXDocumento")]
+        public Cliente ConsultarXDocumento(int Documento)
+        {
+            clsCliente Cliente = new clsCliente();
+            return Cliente.Consultar(Documento);
+        }
+
+        [HttpPost]
+        [Route("Insertar")]
+        public string Insertar([FromBody] Cliente cliente)
+        {
+            clsCliente Cliente = new clsCliente();
+            Cliente.cliente = cliente;
+            return Cliente.Insertar();
+        }
+
+        [HttpPut]
+        [Route("Actualizar")]
+        public string Actualizar([FromBody] Cliente cliente)
+        {
+            clsCliente Cliente = new clsCliente();
+            Cliente.cliente = cliente;
+            return Cliente.Actualizar();
+        }
+
+        [HttpDelete]
+        [Route("Eliminar")]
+        public string Eliminar([FromBody] Cliente cliente)
+        {
+            clsCliente Cliente = new clsCliente();
+            Cliente.cliente = cliente;
+            return Cliente.Eliminar();
+        }
+
+        [HttpDelete]
+        [Route("EliminarXDocumento")]
+        public string EliminarXDocumento(int Documento)
+        {
+            clsCliente Cliente = new clsCliente();
+            return Cliente.EliminarXDocumento(Documento);
+        }
+
+    }
+}

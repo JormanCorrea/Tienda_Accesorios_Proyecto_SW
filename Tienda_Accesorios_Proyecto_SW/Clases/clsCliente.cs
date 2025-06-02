@@ -78,5 +78,26 @@ namespace Tienda_Accesorios_Proyecto_SW.Clases
                 .ToList();
         }
 
+        public string EliminarXDocumento(int Documento)
+        {
+            try
+            {
+                Cliente cli = Consultar(Documento);
+                if (cli == null)
+                {
+                    return "Empleado no existe";
+                }
+
+                dbTienda.Clientes.Remove(cli);
+                dbTienda.SaveChanges();
+                return "Empleado eliminado correctamente";
+
+            }
+            catch (Exception ex)
+            {
+                return "Error al eliminar el cliente: " + ex.Message;
+            }
+        }
+
     }
 }
