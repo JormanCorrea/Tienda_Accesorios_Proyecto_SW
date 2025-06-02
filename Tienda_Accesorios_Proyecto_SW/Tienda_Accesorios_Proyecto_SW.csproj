@@ -167,11 +167,13 @@
     <Compile Include="Clases\clsEmpleado.cs" />
     <Compile Include="Clases\clsProducto.cs" />
     <Compile Include="Clases\clsProveedor.cs" />
+    <Compile Include="Clases\clsPais.cs" />
     <Compile Include="Controllers\clienteController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\ProveedorController.cs" />
+    <Compile Include="Controllers\PaisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
