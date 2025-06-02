@@ -85,12 +85,12 @@ namespace Tienda_Accesorios_Proyecto_SW.Clases
                 Cliente cli = Consultar(Documento);
                 if (cli == null)
                 {
-                    return "Empleado no existe";
+                    return "Cliente no existe";
                 }
 
                 dbTienda.Clientes.Remove(cli);
                 dbTienda.SaveChanges();
-                return "Empleado eliminado correctamente";
+                return "Cliente eliminado correctamente";
 
             }
             catch (Exception ex)
