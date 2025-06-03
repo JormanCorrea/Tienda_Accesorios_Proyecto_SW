@@ -35,7 +35,8 @@ namespace Tienda_Accesorios_Proyecto_SW.Controllers
         {
             clsPais Pais = new clsPais();
             Pais.pais = pais;
-            return pais.Insertar();
+            return Pais.Insertar();
+
         }
 
         [HttpPut]
@@ -43,8 +44,8 @@ namespace Tienda_Accesorios_Proyecto_SW.Controllers
         public string Actualizar([FromBody] Pai pais)
         {
             clsPais Pais = new clsPais();
-            pais.pais = pais;
-            return pais.Actualizar();
+            Pais.pais = pais;
+            return Pais.Actualizar();
         }
 
         [HttpDelete]

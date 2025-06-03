@@ -26,9 +26,9 @@ namespace Tienda_Accesorios_Proyecto_SW.Clases
             }
         }
 
-        public Proveedor Consultar(int Documento)
+        public Proveedor Consultar(int IdProveedor)
         {
-            Proveedor prov = dbTienda.Proveedors.FirstOrDefault(e => e.IdProveedor == Documento);
+            Proveedor prov = dbTienda.Proveedors.FirstOrDefault(e => e.IdProveedor == IdProveedor);
             return prov;
         }
 
@@ -78,11 +78,11 @@ namespace Tienda_Accesorios_Proyecto_SW.Clases
                 .ToList();
         }
 
-        public string EliminarXDocumento(int Documento)
+        public string EliminarXId(int IdProveedor)
         {
             try
             {
-                Proveedor prov = Consultar(Documento);
+                Proveedor prov = Consultar(IdProveedor);
                 if (prov == null)
                 {
                     return "Proveedor no existe";

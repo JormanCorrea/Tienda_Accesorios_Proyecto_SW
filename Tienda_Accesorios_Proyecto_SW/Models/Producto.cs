@@ -30,8 +30,8 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public decimal PrecioVenta { get; set; }
         public int Stock { get; set; }
         public Nullable<int> IdCategoria { get; set; }
-        
-        [JsonIgnore]       
+
+        [JsonIgnore]
         public virtual Categoria Categoria { get; set; }
         [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

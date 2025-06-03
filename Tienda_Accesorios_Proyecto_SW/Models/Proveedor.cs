@@ -9,6 +9,7 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -25,10 +26,13 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public string NombreProveedor { get; set; }
         public string DireccionProveedor { get; set; }
         public Nullable<int> IdCiudadProveedor { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Ciudad Ciudad { get; set; }
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compra> Compras { get; set; }
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProveedorProducto> ProveedorProductoes { get; set; }
     }

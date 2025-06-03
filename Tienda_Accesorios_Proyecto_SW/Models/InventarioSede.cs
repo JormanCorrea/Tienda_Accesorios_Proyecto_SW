@@ -9,6 +9,7 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,8 +19,10 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public Nullable<int> IdSede { get; set; }
         public Nullable<int> CodigoSKU { get; set; }
         public int CantidadDisponible { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Producto Producto { get; set; }
+        [JsonIgnore]
         public virtual Sede Sede { get; set; }
     }
 }

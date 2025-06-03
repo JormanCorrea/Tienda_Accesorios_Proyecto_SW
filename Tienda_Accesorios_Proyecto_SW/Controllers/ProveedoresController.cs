@@ -9,9 +9,9 @@ using Tienda_Accesorios_Proyecto_SW.Models;
 
 namespace Tienda_Accesorios_Proyecto_SW.Controllers
 {
-    [RoutePrefix("api/cliente")]
+    [RoutePrefix("api/Proveedores")]
     //[Authorize]
-    public class ProveedorController : ApiController
+    public class ProveedoresController : ApiController
     {
         [HttpGet]
         [Route("ConsultarTodos")]
@@ -23,10 +23,10 @@ namespace Tienda_Accesorios_Proyecto_SW.Controllers
 
         [HttpGet]
         [Route("ConsultarXDocumento")]
-        public Proveedor ConsultarXDocumento(int Documento)
+        public Proveedor ConsultarXDocumento(int IdProveedor)
         {
             clsProveedor Proveedor = new clsProveedor();
-            return Proveedor.Consultar(Documento);
+            return Proveedor.Consultar(IdProveedor);
         }
 
         [HttpPost]
@@ -57,11 +57,11 @@ namespace Tienda_Accesorios_Proyecto_SW.Controllers
         }
 
         [HttpDelete]
-        [Route("EliminarXDocumento")]
-        public string EliminarXDocumento(int Documento)
+        [Route("EliminarXId")]
+        public string EliminarXId(int idProveedor)
         {
             clsProveedor Proveedor = new clsProveedor();
-            return Proveedor.EliminarXDocumento(Documento);
+            return Proveedor.EliminarXId(idProveedor);
         }
     }
 }

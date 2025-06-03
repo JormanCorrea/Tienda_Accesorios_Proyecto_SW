@@ -55,11 +55,11 @@ namespace Tienda_Accesorios_Proyecto_SW.Clases
         public List<Producto> ConsultarTodos()
         {
             return dbTienda.Productoes
-                .OrderBy(p => p.NombreProducto)
+                .OrderBy(e => e.NombreProducto)
                 .ToList();
         }
 
-        
+
 
         public string Eliminar(int codigo)
         {

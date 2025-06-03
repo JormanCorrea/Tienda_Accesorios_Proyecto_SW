@@ -9,9 +9,9 @@ using Tienda_Accesorios_Proyecto_SW.Models;
 
 namespace Tienda_Accesorios_Proyecto_SW.Controllers
 {
-    [RoutePrefix("api/cliente")]
+    [RoutePrefix("api/Clientes")]
     //[Authorize]
-    public class clienteController : ApiController
+    public class ClientesController : ApiController
     {
         [HttpGet]
         [Route("ConsultarTodos")]

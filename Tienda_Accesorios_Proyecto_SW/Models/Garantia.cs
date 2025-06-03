@@ -9,6 +9,7 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,7 +20,8 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public System.DateTime FechaInicioGarantia { get; set; }
         public System.DateTime FechaFinGarantia { get; set; }
         public string DescripcionGarantia { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Venta Venta { get; set; }
     }
 }

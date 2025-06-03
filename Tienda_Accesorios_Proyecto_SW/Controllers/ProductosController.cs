@@ -22,7 +22,7 @@ namespace Tienda_Accesorios_Proyecto_SW.Controllers
         }
 
         [HttpGet]
-        [Route("Consultar")]
+        [Route("ConsultarXId")]
         public Producto Consultar(int codigo)
         {
             clsProducto Producto = new clsProducto();

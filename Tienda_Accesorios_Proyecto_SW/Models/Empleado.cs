@@ -9,6 +9,7 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,6 +20,7 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         {
             this.Compras = new HashSet<Compra>();
             this.Ventas = new HashSet<Venta>();
+            this.Usuarios = new HashSet<Usuario>();
         }
     
         public int IdEmpleado { get; set; }
@@ -27,9 +29,15 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public Nullable<int> IdSede { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Compra> Compras { get; set; }
+        [JsonIgnore]
         public virtual Sede Sede { get; set; }
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Venta> Ventas { get; set; }
+        [JsonIgnore]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 }

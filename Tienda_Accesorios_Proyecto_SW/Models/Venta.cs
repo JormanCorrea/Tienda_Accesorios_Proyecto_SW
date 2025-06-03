@@ -28,6 +28,7 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public Nullable<int> IdEmpleado { get; set; }
         public Nullable<decimal> TotalVenta { get; set; }
 
+
         [JsonIgnore]
         public virtual Cliente Cliente { get; set; }
         [JsonIgnore]

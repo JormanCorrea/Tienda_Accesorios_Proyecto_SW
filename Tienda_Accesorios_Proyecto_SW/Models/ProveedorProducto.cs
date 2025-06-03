@@ -9,6 +9,7 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,8 +20,10 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public Nullable<int> CodigoSKU { get; set; }
         public decimal PrecioProveedor { get; set; }
         public Nullable<System.DateTime> FechaUltimaActualizacionPrecio { get; set; }
-    
+
+        [JsonIgnore]
         public virtual Producto Producto { get; set; }
+        [JsonIgnore]
         public virtual Proveedor Proveedor { get; set; }
     }
 }

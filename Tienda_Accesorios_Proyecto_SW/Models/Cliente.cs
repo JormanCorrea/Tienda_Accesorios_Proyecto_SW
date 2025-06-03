@@ -21,13 +21,14 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
             this.Ventas = new HashSet<Venta>();
         }
     
+
         public int IdCliente { get; set; }
         public string NombreCliente { get; set; }
         public string DireccionCliente { get; set; }
         public string TelefonoCliente { get; set; }
-        [JsonIgnore]
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
         public virtual ICollection<Venta> Ventas { get; set; }
     }
 }

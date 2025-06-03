@@ -9,30 +9,21 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
-    public partial class Ciudad
+    public partial class Perfil
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Ciudad()
+        public Perfil()
         {
-            this.Proveedors = new HashSet<Proveedor>();
-            this.Sedes = new HashSet<Sede>();
+            this.Usuario_Perfil = new HashSet<Usuario_Perfil>();
         }
     
-        public int IdCiudad { get; set; }
-        public string NombreCiudad { get; set; }
-        public Nullable<int> IdPais { get; set; }
-
-        [JsonIgnore]
-        public virtual Pai Pai { get; set; }
+        public int id { get; set; }
+        public string NombrePerfil { get; set; }
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore]
-        public virtual ICollection<Proveedor> Proveedors { get; set; }
-        [JsonIgnore]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sede> Sedes { get; set; }
+        public virtual ICollection<Usuario_Perfil> Usuario_Perfil { get; set; }
     }
 }

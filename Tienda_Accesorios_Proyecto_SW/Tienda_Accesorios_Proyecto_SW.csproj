@@ -163,17 +163,27 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Clases\clsCategoria.cs" />
     <Compile Include="Clases\clsCliente.cs" />
+    <Compile Include="Clases\clsCompra.cs" />
     <Compile Include="Clases\clsEmpleado.cs" />
+    <Compile Include="Clases\clsGarantia.cs" />
     <Compile Include="Clases\clsProducto.cs" />
     <Compile Include="Clases\clsProveedor.cs" />
     <Compile Include="Clases\clsPais.cs" />
-    <Compile Include="Controllers\clienteController.cs" />
+    <Compile Include="Clases\clsSede.cs" />
+    <Compile Include="Clases\clsVenta.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\ComprasController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\GarantiasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
-    <Compile Include="Controllers\ProveedorController.cs" />
-    <Compile Include="Controllers\PaisController.cs" />
+    <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Controllers\PaisesController.cs" />
+    <Compile Include="Controllers\SedesController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -222,6 +232,9 @@
     <Compile Include="Models\Pai.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Perfil.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Producto.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
@@ -232,6 +245,15 @@
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sede.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario_Perfil.cs">
       <DependentUpon>DBTiendaAccesorios.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Venta.cs">

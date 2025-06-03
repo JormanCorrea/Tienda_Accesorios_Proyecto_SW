@@ -35,10 +35,14 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
         public virtual DbSet<Garantia> Garantias { get; set; }
         public virtual DbSet<InventarioSede> InventarioSedes { get; set; }
         public virtual DbSet<Pai> Pais { get; set; }
+        public virtual DbSet<Perfil> Perfils { get; set; }
         public virtual DbSet<Producto> Productoes { get; set; }
         public virtual DbSet<Proveedor> Proveedors { get; set; }
         public virtual DbSet<ProveedorProducto> ProveedorProductoes { get; set; }
         public virtual DbSet<Sede> Sedes { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Usuario_Perfil> Usuario_Perfil { get; set; }
         public virtual DbSet<Venta> Ventas { get; set; }
     }
 }
