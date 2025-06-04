@@ -13,6 +13,7 @@ namespace Tienda_Accesorios_Proyecto_SW
             // Web API configuration and services
             //Habilitar el esquema de autenticación, para la validación del token
             config.MessageHandlers.Add(new TokenValidationHandler());
+            config.EnableCors();
 
             // Web API routes
             config.MapHttpAttributeRoutes();
