@@ -10,7 +10,7 @@ using Tienda_Accesorios_Proyecto_SW.Models;
 namespace Tienda_Accesorios_Proyecto_SW.Controllers
 {
     [RoutePrefix("api/Empleados")]
-    //[Authorize]
+    [Authorize]
     public class EmpleadosController : ApiController
     {
         [HttpGet]

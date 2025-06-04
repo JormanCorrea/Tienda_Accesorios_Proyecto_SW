@@ -9,6 +9,7 @@ using Tienda_Accesorios_Proyecto_SW.Models;
 
 namespace Tienda_Accesorios_Proyecto_SW.Controllers
 {
+    [Authorize]
     [RoutePrefix("api/Categorias")]
     public class CategoriasController : ApiController
     {

@@ -10,6 +10,7 @@ using Tienda_Accesorios_Proyecto_SW.Models;
 namespace Tienda_Accesorios_Proyecto_SW.Controllers
 {
     [RoutePrefix("api/Garantias")]
+    [AllowAnonymous]
     public class GarantiasController : ApiController
     {
         [HttpGet]

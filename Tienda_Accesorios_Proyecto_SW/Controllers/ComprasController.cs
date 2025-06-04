@@ -10,6 +10,7 @@ using Tienda_Accesorios_Proyecto_SW.Models;
 namespace Tienda_Accesorios_Proyecto_SW.Controllers
 {
     [RoutePrefix("api/Compras")]
+    [AllowAnonymous]
     public class ComprasController : ApiController
     {
         [HttpGet]
