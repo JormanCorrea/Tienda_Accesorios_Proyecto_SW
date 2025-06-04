@@ -22,7 +22,7 @@ namespace Tienda_Accesorios_Proyecto_SW.Controllers
         }
 
         [HttpGet]
-        [Route("ConsultarXDocumento")]
+        [Route("ConsultarXId")]
         public Proveedor ConsultarXDocumento(int IdProveedor)
         {
             clsProveedor Proveedor = new clsProveedor();
