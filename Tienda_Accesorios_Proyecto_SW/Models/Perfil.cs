@@ -9,6 +9,7 @@
 
 namespace Tienda_Accesorios_Proyecto_SW.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -22,7 +23,9 @@ namespace Tienda_Accesorios_Proyecto_SW.Models
     
         public int id { get; set; }
         public string NombrePerfil { get; set; }
-    
+        public string PaginaNavegar { get; set; }
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario_Perfil> Usuario_Perfil { get; set; }
     }

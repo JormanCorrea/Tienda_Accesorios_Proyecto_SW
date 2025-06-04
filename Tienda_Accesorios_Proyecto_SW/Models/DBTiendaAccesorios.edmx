@@ -100,6 +100,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NombrePerfil" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PaginaNavegar" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Producto">
           <Key>
@@ -657,6 +658,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NombrePerfil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PaginaNavegar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Usuario_Perfil" Relationship="Self.FK_Usuario_Perfil_Perfil" FromRole="Perfil" ToRole="Usuario_Perfil" />
         </EntityType>
         <EntityType Name="Producto">
@@ -1226,6 +1228,7 @@
               <MappingFragment StoreEntitySet="Perfil">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="NombrePerfil" ColumnName="NombrePerfil" />
+                <ScalarProperty Name="PaginaNavegar" ColumnName="PaginaNavegar" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

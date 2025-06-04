@@ -78,7 +78,7 @@ namespace Tienda_Accesorios_Proyecto_SW.Clases
                        {
                            Usuario = U.userName,
                            Autenticado = true,
-                           Perfil = P.Nombre,
+                           Perfil = P.NombrePerfil,
                            PaginaInicio = P.PaginaNavegar,
                            Token = token,
                            Mensaje = ""

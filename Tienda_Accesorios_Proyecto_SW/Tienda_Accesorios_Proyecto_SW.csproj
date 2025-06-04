@@ -362,13 +362,6 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\DBTiendaAccesorios.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBTiendaAccesorios.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DBTiendaAccesorios.edmx.diagram">
-      <DependentUpon>DBTiendaAccesorios.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -388,6 +381,13 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <EntityDeploy Include="Models\DBTiendaAccesorios.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBTiendaAccesorios.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DBTiendaAccesorios.edmx.diagram">
+      <DependentUpon>DBTiendaAccesorios.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\site27881-WebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
