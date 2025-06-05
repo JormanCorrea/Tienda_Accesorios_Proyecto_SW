@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e56dd11a7e3644f7b26e241ee3afa5aa" Name="Diagram1">
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Categoria" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Ciudad" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Cliente" Width="1.5" PointX="3.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Compra" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.DetalleCompra" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.DetalleVenta" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Empleado" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Garantia" Width="1.5" PointX="8.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.InventarioSede" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Pai" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Perfil" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Producto" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Proveedor" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.ProveedorProducto" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Sede" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.sysdiagram" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Usuario" Width="1.5" PointX="3" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Usuario_Perfil" Width="1.5" PointX="5.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTiendaAccesoriosModel.Venta" Width="1.5" PointX="6" PointY="17.125" IsExpanded="true" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Producto__IdCate__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Ciudad__IdPais__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Proveedor__IdCiu__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Sede__IdCiudadSe__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Venta__IdCliente__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Compra__IdEmplea__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Compra__IdProvee__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__DetalleCo__IdCom__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__DetalleCo__Codig__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__DetalleVe__Codig__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__DetalleVe__IdVen__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Empleado__IdSede__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Venta__IdEmplead__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK_Usuario_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Garantia__IdVent__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Inventari__Codig__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Inventari__IdSed__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK_Usuario_Perfil_Perfil" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Proveedor__Codig__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK__Proveedor__IdPro__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTiendaAccesoriosModel.FK_Usuario_Perfil_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
